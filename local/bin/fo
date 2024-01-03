@@ -1,0 +1,20 @@
+#!/bin/sh
+
+BROWSER='firefox'
+TERM='urx -e'
+IMAGE='feh'
+MULTI='mpv'
+DOC='zathura'
+
+case "${1##*.}" in
+    webm|html|docx|doc)
+        $BROWSER "$1" ;;
+    pdf)
+        $DOC "$1" ;;
+    png|jpe|jpg|jpeg|avif|webp)
+        $IMAGE "$1" ;;
+    mp4|mkv|opus|wav|flac|ogg|mp3|flv|gifv|gif)
+        $MULTI "$1" ;;
+    *)
+        $TERM nano "$1" ;;
+esac

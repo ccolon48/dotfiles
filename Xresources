@@ -1,0 +1,61 @@
+!! urxvt
+URxvt*buffered:         true
+URxvt*cursorUnderline:  false
+URxvt*cursorBlink:      false
+URxvt*borderless:       1
+URxvt*scrollBar:        false
+URxvt*loginShell:       true
+Urxvt*secondaryScroll:  true
+URxvt*saveLines:        10000
+URxvt*termName:         rxvt-unicode
+URxvt.perl-ext-common:  default,url-select,matcher
+URxvt.matcher.button:   1
+URxvt.refreshRate:      120
+URxvt.depth:            24
+URxvt.geometry:         84x50
+URxvt.internalBorder:   32
+URxvt.urlLauncher:      firefox
+
+!! font
+*font:             -*-fixedmisc-*-*-*-*-18-*-*-*-*-*-*-*
+*boldFont:         -*-fixedmisc-*-*-*-*-18-*-*-*-*-*-*-*
+*italicFont:       -*-fixedmisc-*-*-*-*-18-*-*-*-*-*-*-*
+*boldItalicFont:   -*-fixedmisc-*-*-*-*-18-*-*-*-*-*-*-*
+
+*.background: #e1d7c4
+*.foreground: #20111b
+
+*.cursorColor: #20111b
+
+! black
+*.color0: #20111b
+*.color8: #5e5252
+
+! white
+*.color7:  #968c83
+*.color15: #e1d7c4
+
+! red
+*.color1: #be100e
+*.color9: #be100e
+
+! yellow
+*.color3:  #c07f28
+*.color11: #c07f28
+
+! green
+*.color2:  #6e7943
+*.color10: #6e7943
+
+! cyan
+*.color6:  #757b80
+*.color14: #757b80
+
+! blue
+*.color4:  #426a79
+*.color12: #426a79
+
+! magenta
+*.color5:  #97522c
+*.color13: #97522c
+

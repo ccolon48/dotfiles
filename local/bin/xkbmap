@@ -1,0 +1,5 @@
+#! /bin/sh
+# my settings for keyboard
+setxkbmap -layout us,ru -option grp:shifts_toggle -option ctrl:nocaps
+xset r rate 300 50
+numlockx on

@@ -1,0 +1,6 @@
+#! /bin/sh
+
+export NNN_OPENER='fo'
+export NNN_COLORS=2638
+
+nnn -xe "$@"

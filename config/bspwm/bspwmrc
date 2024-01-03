@@ -1,0 +1,48 @@
+#! /bin/sh
+
+## functions
+conf() { bspc config "$@" & }
+rule() { bspc rule -a "$@" & }
+
+## assets
+FG='#e1d7c4'
+BG='#20111b'
+BC='#968c83'
+FF='-*-fixedmisc-*-*-*-*-18-*-*-*-*-*-*-*'
+
+## workspaces
+bspc monitor -d 0000 0001 0010 0011 0100 0101
+
+## config
+conf normal_border_color      "$FG"
+conf focused_border_color     "$BC"
+conf presel_feedback_color    "$BC"
+conf pointer_motion_interval  6
+conf bottom_padding           40
+conf window_gap               8
+conf top_padding              0
+conf left_padding             24
+conf right_padding            24
+conf border_width             4
+conf split_ratio              0.47
+conf automatic_scheme         spiral
+
+## rules
+rule Firefox          desktop='^2'
+rule Gimp             desktop='^3' follow=on
+rule REAPER           desktop='^4' follow=on
+rule feh              state=floating
+rule mpv              state=floating
+rule Pavucontrol      state=floating
+rule TelegramDesktop  state=floating
+rule XCalc            state=floating
+
+## autostart
+pgrep -x sxhkd > /dev/null       || sxhkd &
+pgrep -x urxvtd > /dev/null      || urxvtd -q -o -f &
+pgrep -x pulseaudio > /dev/null  || pulseaudio --start &
+pgrep -x lemonbar > /dev/null    || bar.sh | lemonbar -b -f "$FF" -g 1856x32+32+8 -F "$FG" -B "$BG" &
+pgrep -x xbanish > /dev/null     || xbanish -m nw -t 2 &
+feh --bg-tile --no-fehbg "$HOME"/woman-in-the-garden.jpg
+sct 5300
+xkbmap
